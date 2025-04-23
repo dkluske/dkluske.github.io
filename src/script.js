@@ -3,7 +3,7 @@ const projects = [
     {
         title: 'dekay',
         description: 'Eine mobile fitness app für den täglichen Gebrauch. Enthält Gesundheitsdaten, Meal Tracking, Auswertungen und vieles mehr.',
-        image: 'https://via.placeholder.com/600x400',
+        image: 'https://github.com/dkluske/dekay/blob/master/statics/dekay_pill.png?raw=true',
         technologies: ['Kotlin Multiplatform', 'Jetpack Compose', 'SQLite', 'SQLDelight', 'Ktor'],
         link: 'https://github.com/dkluske/dekay'
     },
