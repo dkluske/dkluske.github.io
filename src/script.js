@@ -5,14 +5,14 @@ const projects = [
         description: 'Eine mobile fitness app für den täglichen Gebrauch. Enthält Gesundheitsdaten, Meal Tracking, Auswertungen und vieles mehr.',
         image: 'https://via.placeholder.com/600x400',
         technologies: ['Kotlin Multiplatform', 'Jetpack Compose', 'SQLite', 'SQLDelight', 'Ktor'],
-        link: '#'
+        link: 'https://github.com/dkluske/dekay'
     },
     {
         title: 'HealthKMP',
         description: 'Ein wrapper für die HealthKit API von Apple sowie die Google Fit API. Geforkt von der offiziellen Implementierung.',
         image: 'https://via.placeholder.com/600x400',
         technologies: ['HealthKit', 'Kotlin Multiplatform', 'Androidx Health Connect', 'GitHub Actions'],
-        link: '#'
+        link: 'https://github.com/dkluske/HealthKMP'
     },
     {
         title: 'BDY',
