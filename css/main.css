@@ -58,7 +58,7 @@ section:last-child {
     text-decoration: none;
     padding: 8px;
     border-radius: 16px;
-    background-color: #2d81ff;
+    background-color: rgba(45, 129, 255, 1.0);
     font-weight: 500;
 }
 #portfolio-welcome-image > div {
@@ -69,6 +69,19 @@ section:last-child {
 }
 #portfolio-about > p {
     font-weight: 400;
+}
+.tag-pill-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.tag-pill {
+    background-color: rgba(13, 202, 240, 0.3);
+    border: 1px solid rgba(13, 202, 240, 1);
+    border-radius: 8px;
+    color: rgba(13, 202, 240, 1);
+    padding: 4px;
+    margin: 3px;
 }
 
 /* Dark Scheme Behavior */
