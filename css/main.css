@@ -54,7 +54,7 @@ section:last-child {
 #portfolio-welcome-image > h1 {
     font-weight: bold;
 }
-#portfolio-welcome-image > div > a {
+.view-project-link {
     text-decoration: none;
     padding: 8px;
     border-radius: 16px;
