@@ -1,99 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="/js/bootstrap.bundle.js"></script>
-    <title>Dominik Kluske | Personal Portfolio</title>
-</head>
-<body>
-    <nav class="navbar navbar-desktop">
-        <div class="nav-left">
-            <div class="nav-logo nav-item" id="nav-tab-logo" role="tablist">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="/js/bootstrap.bundle.js"></script>
+        <title>Dominik Kluske | Personal Portfolio</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-desktop">
+            <div class="nav-left">
+                <div class="nav-logo nav-item" id="nav-tab-logo" role="tablist">
+                    <a href="#portfolio-welcome">
+                        <span>Dominik Kluske</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-right nav flex-row">
+                <div class="nav-item" id="nav-tab-about" role="tablist">
+                    <a href="#portfolio-about">About</a>
+                </div>
+                <div class="nav-item" id="nav-tab-skills" role="tablist">
+                    <a href="#portfolio-skills">Skills</a>
+                </div>
+                <div class="nav-item" id="nav-tab-projects" role="tablist">
+                    <a href="#portfolio-projects">Projects</a>
+                </div>
+                <div class="nav-item" id="nav-tab-contact" role="tablist">
+                    <a href="#portfolio-contact">Contact</a>
+                </div>
+                <div class="nav-item" id="nav-tab-legal" role="tablist">
+                    <a href="/legal.html">Legal</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-mobile flex-column">
+            <div class="nav-logo nav-item" id="nav-tab-logo-mobile" role="tablist">
                 <a href="#portfolio-welcome">
                     <span>Dominik Kluske</span>
                 </a>
             </div>
-        </div>
-        <div class="nav-right nav flex-row">
-            <div class="nav-item" id="nav-tab-about" role="tablist">
+            <div class="nav-item" id="nav-tab-about-mobile" role="tablist">
                 <a href="#portfolio-about">About</a>
             </div>
-            <div class="nav-item" id="nav-tab-skills" role="tablist">
+            <div class="nav-item" id="nav-tab-skills-mobile" role="tablist">
                 <a href="#portfolio-skills">Skills</a>
             </div>
-            <div class="nav-item" id="nav-tab-projects" role="tablist">
+            <div class="nav-item" id="nav-tab-projects-mobile" role="tablist">
                 <a href="#portfolio-projects">Projects</a>
             </div>
-            <div class="nav-item" id="nav-tab-contact" role="tablist">
+            <div class="nav-item" id="nav-tab-contact-mobile" role="tablist">
                 <a href="#portfolio-contact">Contact</a>
             </div>
-            <div class="nav-item" id="nav-tab-legal" role="tablist">
+            <div class="nav-item" id="nav-tab-legal-mobile" role="tablist">
                 <a href="/legal.html">Legal</a>
             </div>
-        </div>
-    </nav>
-    <nav class="navbar navbar-mobile flex-column">
-        <div class="nav-logo nav-item" id="nav-tab-logo-mobile" role="tablist">
-            <a href="#portfolio-welcome">
-                <span>Dominik Kluske</span>
-            </a>
-        </div>
-        <div class="nav-item" id="nav-tab-about-mobile" role="tablist">
-            <a href="#portfolio-about">About</a>
-        </div>
-        <div class="nav-item" id="nav-tab-skills-mobile" role="tablist">
-            <a href="#portfolio-skills">Skills</a>
-        </div>
-        <div class="nav-item" id="nav-tab-projects-mobile" role="tablist">
-            <a href="#portfolio-projects">Projects</a>
-        </div>
-        <div class="nav-item" id="nav-tab-contact-mobile" role="tablist">
-            <a href="#portfolio-contact">Contact</a>
-        </div>
-        <div class="nav-item" id="nav-tab-legal-mobile" role="tablist">
-            <a href="/legal.html">Legal</a>
-        </div>
-    </nav>
-    <div class="content-wrapper">
-        <section id="portfolio-welcome">
-            <div class="portfolio-card" id="portfolio-welcome-image">
-                <h1>Hi, I'm Dominik</h1>
-                <p>A passionate software developer with a focus on creating innovative solutions. I specialize in building scalable and efficient applications</p>
-                <div>
-                    <a href="#portfolio-projects">View Projects</a>
+        </nav>
+        <div class="content-wrapper">
+            <section id="portfolio-welcome">
+                <div class="portfolio-card" id="portfolio-welcome-image">
+                    <h1>Hi, I'm Dominik</h1>
+                    <p>A passionate software developer with a focus on creating innovative solutions. I specialize in
+                        building scalable and efficient applications</p>
+                    <div>
+                        <a href="#portfolio-projects">View Projects</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section id="portfolio-about">
-            <h2>About Me</h2>
-            <p>I'm a software developer from Germany with about 3 years of professional programming experience. I love developing all kinds of software from frontend to backend as well as apis etc.</p>
-        </section>
-        <section id="portfolio-skills">
-            <h2>Skills</h2>
-            <div class="tag-pill-wrapper">
-                <span class="tag-pill">Java</span>
-                <span class="tag-pill">Kotlin</span>
-                <span class="tag-pill">Spring Framework</span>
-                <span class="tag-pill">Ktor</span>
-                <span class="tag-pill">SQL</span>
-                <span class="tag-pill">Jetpack Compose</span>
-                <span class="tag-pill">Kotlin Multiplatform</span>
-                <span class="tag-pill">REST</span>
-                <span class="tag-pill">SOAP</span>
-                <span class="tag-pill">Websockets</span>
-                <span class="tag-pill">Git</span>
-                <span class="tag-pill">Maven</span>
-                <span class="tag-pill">Gradle</span>
-            </div>
-        </section>
-        <section id="portfolio-projects">
+            </section>
+            <section id="portfolio-about">
+                <h2>About Me</h2>
+                <p>I'm a software developer from Germany with about 3 years of professional programming experience. I
+                    love developing all kinds of software from frontend to backend as well as apis etc.</p>
+            </section>
+            <section id="portfolio-skills">
+                <h2>Skills</h2>
+                <div class="tag-pill-wrapper">
+                    <span class="tag-pill">Java</span>
+                    <span class="tag-pill">Kotlin</span>
+                    <span class="tag-pill">Spring Framework</span>
+                    <span class="tag-pill">Ktor</span>
+                    <span class="tag-pill">SQL</span>
+                    <span class="tag-pill">Jetpack Compose</span>
+                    <span class="tag-pill">Kotlin Multiplatform</span>
+                    <span class="tag-pill">REST</span>
+                    <span class="tag-pill">SOAP</span>
+                    <span class="tag-pill">Websockets</span>
+                    <span class="tag-pill">Git</span>
+                    <span class="tag-pill">Maven</span>
+                    <span class="tag-pill">Gradle</span>
+                </div>
+            </section>
+            <section id="portfolio-projects">
+                <h2>Projects</h2>
+                <div class="project-wrapper"><!-- Dekay -->
+                    <div class="project-info">
+                        <h4>Dekay</h4>
+                        <p>Dekay is an open source mobile app for the daily use. You can track your habits, your fitness
+                            stats as well as track your nutrition.</p>
+                        <div class="tag-pill-wrapper">
+                            <span class="tag-pill">Kotlin Multiplatform</span>
+                            <span class="tag-pill">Jetpack Compose</span>
+                            <span class="tag-pill">Compose Multiplatform</span>
+                            <span class="tag-pill">SQLite</span>
+                            <span class="tag-pill">Android</span>
+                            <span class="tag-pill">iOS</span>
+                        </div>
+                    </div>
+                    <div class="project-image">
 
-        </section>
-        <section id="portfolio-contact">
+                    </div>
+                </div>
+                <div class="project-wrapper"><!-- HealthKMP -->
+                    <div class="project-info">
+                        <h4>HealthKMP</h4>
+                        <p>HealthKMP is a forked repository for accessing Health Data from Apple HealthKit or Google Health.</p>
+                        <div class="tag-pill-wrapper">
+                            <span class="tag-pill">Kotlin Multiplatform</span>
+                            <span class="tag-pill">iOS</span>
+                            <span class="tag-pill">Android</span>
+                        </div>
+                    </div>
+                    <div class="project-image">
 
-        </section>
-    </div>
-</body>
+                    </div>
+                </div>
+                <div class="project-wrapper"><!-- Day -->
+                    <div class="project-info">
+                        <h4>day</h4>
+                        <p>day will be an app with an integrated AI Agent, that will help you with having a healthy day by providing workout as well as nutrition tips. This app is currently in planning.</p>
+                        <div class="tag-pill-wrapper">
+                            <span class="tag-pill">Kotlin Multiplatform</span>
+                            <span class="tag-pill">Spring Framework</span>
+                            <span class="tag-pill">AI</span>
+                            <span class="tag-pill">Hugging Face</span>
+                            <span class="tag-pill">Android</span>
+                            <span class="tag-pill">iOS</span>
+                            <span class="tag-pill">Web</span>
+                        </div>
+                    </div>
+                    <div class="project-image">
+
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio-contact">
+
+            </section>
+        </div>
+    </body>
 </html>
