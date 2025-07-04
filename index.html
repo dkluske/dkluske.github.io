@@ -1,151 +1,84 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominik Kluske | Portfolio</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="src/styles.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/src/code.ico">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="/js/bootstrap.bundle.js"></script>
+    <title>Dominik Kluske | Personal Portfolio</title>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav id="navigation" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-blue-500">Dominik Kluske</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#welcome" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">Über mich</a>
-                    <a href="#projects" class="nav-link">Projekte</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#contact" class="nav-link">Kontakt</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-800">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+<body>
+    <nav class="navbar navbar-desktop">
+        <div class="nav-left">
+            <div class="nav-logo nav-item" id="nav-tab-logo" role="tablist">
+                <a href="#portfolio-welcome">
+                    <span>Dominik Kluske</span>
+                </a>
+            </div>
+        </div>
+        <div class="nav-right nav flex-row">
+            <div class="nav-item" id="nav-tab-about" role="tablist">
+                <a href="#portfolio-about">About</a>
+            </div>
+            <div class="nav-item" id="nav-tab-skills" role="tablist">
+                <a href="#portfolio-skills">Skills</a>
+            </div>
+            <div class="nav-item" id="nav-tab-projects" role="tablist">
+                <a href="#portfolio-projects">Projects</a>
+            </div>
+            <div class="nav-item" id="nav-tab-contact" role="tablist">
+                <a href="#portfolio-contact">Contact</a>
+            </div>
+            <div class="nav-item" id="nav-tab-legal" role="tablist">
+                <a href="/legal.html">Legal</a>
             </div>
         </div>
     </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-white shadow-lg hidden md:hidden">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-col space-y-4">
-                <a href="#welcome" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">Über mich</a>
-                <a href="#projects" class="nav-link">Projekte</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Kontakt</a>
-            </div>
+    <nav class="navbar navbar-mobile flex-column">
+        <div class="nav-logo nav-item" id="nav-tab-logo-mobile" role="tablist">
+            <a href="#portfolio-welcome">
+                <span>Dominik Kluske</span>
+            </a>
         </div>
+        <div class="nav-item" id="nav-tab-about-mobile" role="tablist">
+            <a href="#portfolio-about">About</a>
+        </div>
+        <div class="nav-item" id="nav-tab-skills-mobile" role="tablist">
+            <a href="#portfolio-skills">Skills</a>
+        </div>
+        <div class="nav-item" id="nav-tab-projects-mobile" role="tablist">
+            <a href="#portfolio-projects">Projects</a>
+        </div>
+        <div class="nav-item" id="nav-tab-contact-mobile" role="tablist">
+            <a href="#portfolio-contact">Contact</a>
+        </div>
+        <div class="nav-item" id="nav-tab-legal-mobile" role="tablist">
+            <a href="/legal.html">Legal</a>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <section id="portfolio-welcome">
+            <div class="portfolio-card" id="portfolio-welcome-image">
+                <h1>Hi, I'm Dominik</h1>
+                <p>A passionate software developer with a focus on creating innovative solutions. I specialize in building scalable and efficient applications</p>
+                <div>
+                    <a href="#portfolio-projects">View Projects</a>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio-about">
+            <h2>About Me</h2>
+            <p>I'm a software developer from Germany with about 3 years of professional programming experience. PLEASE ADD MORE TEXT HERE @dkluske</p>
+        </section>
+        <section id="portfolio-skills">
+
+        </section>
+        <section id="portfolio-projects">
+
+        </section>
+        <section id="portfolio-contact">
+
+        </section>
     </div>
-
-    <main>
-        <!-- Welcome Section -->
-        <section id="welcome" class="section bg-gradient-to-br from-blue-400 to-blue-800 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Dominik Kluske</h1>
-                <h2 class="text-2xl md:text-3xl font-light mb-8 animate-fade-in-delay">Professional Software Developer</h2>
-                <div class="flex justify-center space-x-4">
-                    <a href="#projects" class="px-8 py-3 bg-white text-blue-500 rounded-full font-semibold hover:bg-opacity-90 transition-all">
-                        Meine Projekte
-                    </a>
-                    <a href="#contact" class="px-8 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-blue-500 transition-all">
-                        Kontakt
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center mb-12">Über mich</h2>
-                    <div class="bg-white rounded-xl shadow-lg p-8">
-                        <p class="text-lg leading-relaxed mb-6">
-                            Hallo! Ich bin ein leidenschaftlicher Software Entwickler mit Fokus auf moderne Technologien und benutzerfreundliche Designs.
-                        </p>
-                        <p class="text-lg leading-relaxed mb-6">
-                            Meine Stärken liegen in der Frontend-Entwicklung mit Jetpack Compose, React oder Vaadin, sowie in der Backend-Entwicklung mit Kotlin und Java. 
-                            Ich lege großen Wert auf sauberen Code, Performance und eine optimale Benutzererfahrung.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            Neben meiner aktuellen Tätigkeit in der Point-of-sale Branche, arbeite ich sehr gern in meiner Freizeit an privaten <a href="#projects">Projekten</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Meine Projekte</h2>
-                <div class="relative">
-                    <div class="swiper projects-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Projects will be added dynamically -->
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Meine Skills</h2>
-                <div class="relative">
-                    <div class="swiper skills-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Skills will be added dynamically -->
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Kontakt</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <!-- Contact cards will be added dynamically -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Dominik Kluske. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="src/script.js"></script>
 </body>
-</html> 
+</html>
