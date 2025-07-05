@@ -101,7 +101,7 @@ section:last-child {
 }
 .contact-wrapper {
     display: flex;
-    margin: 8px 0;
+    margin: 20px 0;
 }
 .contact-input {
     border-bottom: 1px solid rgba(128, 128, 128, 1.0);
@@ -116,6 +116,20 @@ section:last-child {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.contact-link > i {
+    font-size: 2rem;
+    background-color: transparent;
+}
+.contact-link {
+    padding: 6px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.2);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 6px;
 }
 
 /* Dark Scheme Behavior */
@@ -186,6 +200,9 @@ section:last-child {
 @media screen and (min-width: 601px) {
     .navbar-mobile {
         display: none;
+    }
+    .content-wrapper {
+        margin-top: 80px;
     }
     .project-info {
         width: 100%;
