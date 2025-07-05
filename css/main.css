@@ -61,11 +61,11 @@ section:last-child {
     background-color: rgba(45, 129, 255, 1.0);
     font-weight: 500;
 }
+.view-project-link:hover {
+    text-decoration: underline;
+}
 #portfolio-welcome-image > div {
     width: 100%;
-}
-#portfolio-welcome-image > div > a:hover {
-    text-decoration: underline;
 }
 #portfolio-about > p {
     font-weight: 400;
@@ -74,6 +74,7 @@ section:last-child {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-bottom: 16px;
 }
 .tag-pill {
     background-color: rgba(13, 202, 240, 0.3);
