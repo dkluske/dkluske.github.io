@@ -195,6 +195,9 @@ section:last-child {
     .contact-content-wrapper {
         width: 100%;
     }
+    #send-email-link {
+        margin-bottom: 30px;
+    }
 }
 /* Desktop Screen Behavior */
 @media screen and (min-width: 601px) {
