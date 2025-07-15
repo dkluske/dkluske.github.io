@@ -43,6 +43,9 @@ section:last-child {
     border-radius: 16px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
+.portfolio-section {
+    margin: 48px 0;
+}
 #portfolio-welcome-image {
     min-height: 300px;
     background-position: center;
@@ -116,6 +119,13 @@ section:last-child {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.contact-content-wrapper:last-child {
+    flex-direction: row;
+    align-content: center;
+}
+.contact-content-wrapper:last-child > a {
+    margin: auto;
 }
 .contact-link > i {
     font-size: 2rem;
