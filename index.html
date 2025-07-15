@@ -36,7 +36,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-mobile flex-column align-content-start">
+        <nav class="navbar navbar-mobile flex-column fixed-top align-content-start">
             <button id="enable-mobile-nav-bar" onclick="toggleMobileMenu()"><span><i class="bi bi-list"></i></span></button>
         </nav>
         <nav class="navbar navbar-mobile flex-column fixed-top hidden" id="mobile-nav-bar">
@@ -159,16 +159,13 @@
                 <div class="contact-wrapper">
                     <div class="contact-content-wrapper">
                         <label>
-                            <input type="text" placeholder="Name" class="contact-input"/>
+                            <input type="text" placeholder="Topic" class="contact-input" id="contact-topic"/>
                         </label>
                         <label>
-                            <input type="text" placeholder="Topic" class="contact-input"/>
-                        </label>
-                        <label>
-                            <input type="text" placeholder="Description" class="contact-input"/>
+                            <input type="text" placeholder="Description" class="contact-input" id="contact-description"/>
                         </label>
                         <br>
-                        <a id="send-email-link" class="view-project-link">Send Mail</a>
+                        <a id="send-email-link" class="view-project-link" href="mailto:dominik.kluske@proton.me">Send Mail</a>
                     </div>
                     <div class="contact-content-wrapper">
                         <a class="contact-link"><i class="bi bi-linkedin"></i></a> <!-- LinkedIn -->
