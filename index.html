@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <script src="/js/bootstrap.bundle.js"></script>
+        <script src="/js/main.js"></script>
         <title>Dominik Kluske | Personal Portfolio</title>
     </head>
     <body>
@@ -35,8 +36,12 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-mobile flex-column">
+        <nav class="navbar navbar-mobile flex-column align-content-start">
+            <button id="enable-mobile-nav-bar" onclick="toggleMobileMenu()"><span><i class="bi bi-list"></i></span></button>
+        </nav>
+        <nav class="navbar navbar-mobile flex-column fixed-top hidden" id="mobile-nav-bar">
             <div class="nav-logo nav-item" id="nav-tab-logo-mobile" role="tablist">
+                <button id="disable-mobile-nav-bar" onclick="toggleMobileMenu()"><span><i class="bi bi-x"></i></span></button>
                 <a href="#portfolio-welcome">
                     <span>Dominik Kluske</span>
                 </a>

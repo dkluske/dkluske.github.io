@@ -141,6 +141,9 @@ section:last-child {
     text-align: center;
     margin: 6px;
 }
+.hidden {
+    display: none;
+}
 
 /* Dark Scheme Behavior */
 @media (prefers-color-scheme: dark) {
