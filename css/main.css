@@ -144,6 +144,17 @@ section:last-child {
 .hidden {
     display: none;
 }
+.project-image {
+    margin-left: 8px;
+}
+#enable-mobile-nav-bar-row {
+    background: transparent;
+}
+#enable-mobile-nav-bar {
+    margin: 12px;
+    border: none;
+    font-size: 32px;
+}
 
 /* Dark Scheme Behavior */
 @media (prefers-color-scheme: dark) {
