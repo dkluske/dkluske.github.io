@@ -80,10 +80,7 @@ section:last-child {
     margin-bottom: 16px;
 }
 .tag-pill {
-    background-color: rgba(13, 202, 240, 0.3);
-    border: 1px solid rgba(13, 202, 240, 1);
     border-radius: 8px;
-    color: rgba(13, 202, 240, 1);
     padding: 4px;
     margin: 3px;
 }
@@ -177,6 +174,11 @@ section:last-child {
     .contact-link-icon {
         color: #fffaf5;
     }
+    .tag-pill {
+        background-color: rgba(13, 202, 240, 0.3);
+        border: 1px solid rgba(13, 202, 240, 1);
+        color: rgba(13, 202, 240, 1);
+    }
 }
 
 /* Light Scheme Behavior */
@@ -199,6 +201,11 @@ section:last-child {
     }
     .contact-link-icon {
         color: #1b1c23;
+    }
+    .tag-pill {
+        background-color: rgba(38, 165, 255, 0.3);
+        border: 1px solid rgba(0, 23, 74, 1);
+        color: rgba(0, 23, 74, 1);
     }
 }
 
