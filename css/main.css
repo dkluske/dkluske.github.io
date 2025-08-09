@@ -99,6 +99,7 @@ section:last-child {
     border-radius: 8px;
     padding: 4px;
     margin: 3px;
+    font-size: 12px;
 }
 .project-wrapper {
     display: flex;
@@ -194,7 +195,6 @@ section:last-child {
     }
     .tag-pill {
         background-color: rgba(13, 202, 240, 0.3);
-        border: 1px solid rgba(13, 202, 240, 1);
         color: rgba(13, 202, 240, 1);
     }
     .view-project-link {
@@ -226,7 +226,6 @@ section:last-child {
     }
     .tag-pill {
         background-color: rgba(38, 165, 255, 0.3);
-        border: 1px solid rgba(0, 23, 74, 1);
         color: rgba(0, 23, 74, 1);
     }
     .view-project-link {
