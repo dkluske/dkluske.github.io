@@ -61,7 +61,6 @@ section:last-child {
     text-decoration: none;
     padding: 8px;
     border-radius: 16px;
-    background-color: rgba(45, 129, 255, 1.0);
     font-weight: 500;
 }
 .view-project-link:hover {
@@ -104,13 +103,15 @@ section:last-child {
     margin: 20px 0;
 }
 .contact-input {
+    border: 0;
     border-bottom: 1px solid rgba(128, 128, 128, 1.0);
     background-color: rgba(128, 128, 128, 0.1);
     padding: 4px;
     margin-bottom: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    --webkit-appearance: none;
+    --moz-appearance: none;
     appearance: none;
+    outline: none;
 }
 .contact-content-wrapper {
     display: flex;
@@ -179,6 +180,10 @@ section:last-child {
         border: 1px solid rgba(13, 202, 240, 1);
         color: rgba(13, 202, 240, 1);
     }
+    .view-project-link {
+        background-color: rgba(45, 129, 255, 1.0);
+
+    }
 }
 
 /* Light Scheme Behavior */
@@ -206,6 +211,9 @@ section:last-child {
         background-color: rgba(38, 165, 255, 0.3);
         border: 1px solid rgba(0, 23, 74, 1);
         color: rgba(0, 23, 74, 1);
+    }
+    .view-project-link {
+        background-color: rgb(147, 178, 255);
     }
 }
 
