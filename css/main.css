@@ -49,6 +49,13 @@ section:last-child {
 #portfolio-welcome-image {
     min-height: 300px;
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #portfolio-welcome-image > * {
     background: transparent;
@@ -56,6 +63,16 @@ section:last-child {
 }
 #portfolio-welcome-image > h1 {
     font-weight: bold;
+    animation: fadeInSlide 1s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+#portfolio-welcome-image > p {
+    animation: fadeInSlide 1s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+#portfolio-welcome-image > a {
+    animation: fadeInSlide 1s ease-in-out forwards;
+    animation-delay: 0.6s;
 }
 .view-project-link {
     text-decoration: none;
@@ -287,4 +304,16 @@ section:last-child {
     font-family: "Space Grotesk";
     font-weight: 300;
     src: url("/static/font/space_grotesk/SpaceGrotesk-Light.ttf");
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
