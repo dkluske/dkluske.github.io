@@ -1,151 +1,402 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominik Kluske | Portfolio</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="src/styles.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/src/code.ico">
+    <title>Dominik Kluske | Software Engineer</title>
+    <style>
+        @font-face {
+            font-family: 'Jetbrains-Mono';
+            src: url('./src/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+        }
+        :root {
+            --background-color: #0A0A0A;
+            --primary-text-color: #ededed;
+            --secondary-text-color: #c5c5c5;
+            --tertiary-text-color: #7a7a7a;
+            --border-color: #434343;
+        }
+        * {
+            transition: all 200ms ease-in-out;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        html {
+            background: var(--background-color);
+            color: var(--primary-text-color);
+            font-weight: normal;
+            font-family: 'Jetbrains-Mono', monospace;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        #content-wrapper::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+            z-index: 0;
+            mask-image: radial-gradient(ellipse 80% 80% at 60% 50%, black 30%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 80% at 60% 50%, black 30%, transparent 100%);
+        }
+        .primary-text {
+            color: var(--primary-text-color);
+        }
+        .secondary-text {
+            color: var(--secondary-text-color);
+        }
+        .tertiary-text {
+            color: var(--tertiary-text-color);
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .big {
+            font-size: 48px;
+        }
+        .medium {
+            font-size: 24px;
+        }
+        .small {
+            font-size: 14px;
+        }
+        .nowrap {
+            text-wrap: nowrap;
+        }
+        #content-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+        #sidebar {
+            border-right: 1px solid var(--border-color);
+            min-width: fit-content;
+            max-width: 20%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 16px;
+        }
+        #nav-list {
+            align-self: center;
+        }
+        .content-index {
+            margin-bottom: 16px;
+        }
+        .chapter-indicator {
+            color: transparent;
+            padding-right: 8px;
+        }
+        #nav-list {
+            list-style: none;
+            padding: 0 16px;
+            margin: 0;
+        }
+        #nav-list li {
+            padding-left: 16px;
+            cursor: pointer;
+            color: var(--tertiary-text-color);
+        }
+        #nav-list li:hover {
+            color: var(--secondary-text-color);
+            .chapter-indicator {
+                color: var(--secondary-text-color);
+            }
+        }
+        #main-content {
+            padding-left: 16px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #content-wrapper[state="ABOUT"] {
+            #main-content {
+                .main-content-PROJECTS, .main-content-SKILLS, .main-content-EXPERIENCE, .main-content-CONTACT {
+                    display: none;
+                }
+            }
+            #nav-list #nav-ABOUT {
+                color: var(--primary-text-color);
+            }
+            #nav-list #nav-ABOUT .chapter-indicator {
+                color: var(--primary-text-color);
+            }
+        }
+        #content-wrapper[state="PROJECTS"] {
+            #main-content {
+                .main-content-ABOUT, .main-content-SKILLS, .main-content-EXPERIENCE, .main-content-CONTACT {
+                    display: none;
+                }
+            }
+            #nav-list #nav-PROJECTS {
+                color: var(--primary-text-color);
+            }
+            #nav-list #nav-PROJECTS .chapter-indicator {
+                color: var(--primary-text-color);
+            }
+        }
+        #content-wrapper[state="SKILLS"] {
+            #main-content {
+                .main-content-ABOUT, .main-content-PROJECTS, .main-content-EXPERIENCE, .main-content-CONTACT {
+                    display: none;
+                }
+            }
+            #nav-list #nav-SKILLS {
+                color: var(--primary-text-color);
+            }
+            #nav-list #nav-SKILLS .chapter-indicator {
+                color: var(--primary-text-color);
+            }
+        }
+        #content-wrapper[state="EXPERIENCE"] {
+            #main-content {
+                .main-content-ABOUT, .main-content-PROJECTS, .main-content-SKILLS, .main-content-CONTACT {
+                    display: none;
+                }
+            }
+            #nav-list #nav-EXPERIENCE {
+                color: var(--primary-text-color);
+            }
+            #nav-list #nav-EXPERIENCE .chapter-indicator {
+                color: var(--primary-text-color);
+            }
+        }
+        #content-wrapper[state="CONTACT"] {
+            #main-content {
+                .main-content-ABOUT, .main-content-PROJECTS, .main-content-SKILLS, .main-content-EXPERIENCE {
+                    display: none;
+                }
+            }
+            #nav-list #nav-CONTACT {
+                color: var(--primary-text-color);
+            }
+            #nav-list #nav-CONTACT .chapter-indicator {
+                color: var(--primary-text-color);
+            }
+        }
+        .list-item-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .list-item-wrapper:first-child {
+            border-top: 1px solid var(--border-color);
+        }
+        .list-item-heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .list-item-table-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .list-item-table-row > div:first-child {
+            min-width: 15%;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0;
+        }
+        #skills-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .link {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function updateState(newState) {
+            document.getElementById("content-wrapper").setAttribute("state", newState);
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav id="navigation" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-blue-500">Dominik Kluske</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#welcome" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">Über mich</a>
-                    <a href="#projects" class="nav-link">Projekte</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#contact" class="nav-link">Kontakt</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-800">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
+<body>
+    <div id="content-wrapper" state="ABOUT">
+        <div id="sidebar">
+            <p class="tertiary-text" style="padding:8px 0 32px 0;">DK</p>
+            <ul id="nav-list">
+                <li id="nav-ABOUT" onclick="updateState('ABOUT')"><span class="chapter-indicator">-</span>about</li>
+                <li id="nav-PROJECTS" onclick="updateState('PROJECTS')"><span class="chapter-indicator">-</span>projects</li>
+                <li id="nav-SKILLS" onclick="updateState('SKILLS')"><span class="chapter-indicator">-</span>skills</li>
+                <li id="nav-EXPERIENCE" onclick="updateState('EXPERIENCE')"><span class="chapter-indicator">-</span>experience</li>
+                <li id="nav-CONTACT" onclick="updateState('CONTACT')"><span class="chapter-indicator">-</span>contact</li>
+            </ul>
         </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed top-16 left-0 right-0 bg-white shadow-lg hidden md:hidden">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex flex-col space-y-4">
-                <a href="#welcome" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">Über mich</a>
-                <a href="#projects" class="nav-link">Projekte</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#contact" class="nav-link">Kontakt</a>
+        <div id="main-content">
+            <div class="main-content-ABOUT">
+                <p class="content-index tertiary-text small">01 / ABOUT</p>
+                <p class="big">Dominik Kluske</p>
+                <p class="secondary-text small" style="padding-bottom: 32px;">Software Engineer</p>
+                <p class="secondary-text small" style="padding-bottom: 16px;">I build focused, minimal software.</p>
+                <p class="secondary-text small" style="padding-bottom: 16px;">My work lives at the intersection of clean<br>architecture and purposeful UX — tools that do<br>exactly one thing, and do it well.</p>
+                <p class="secondary-text small">Based in Germany. Open to new opportunities.</p>
+            </div>
+            <div class="main-content-PROJECTS">
+                <p class="content-index tertiary-text small">02 / PROJECTS</p>
+                <ul id="projects-list">
+                    <li class="list-item-wrapper"><!-- jim -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium"><a href="https://github.com/dkluske/jim" class="primary-text link">jim</a></p>
+                                <p class="tertiary-text">Compose Multiplatform</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text">2026</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">A gym workout plan tracker. Log sets<br>and weights in seconds, track progress over time.<br>Offline-first, no ads, no subscriptions.</p>
+                    </li>
+                    <li class="list-item-wrapper"><!-- hydr8 -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium">hydr8</p>
+                                <p class="tertiary-text">Compose Multiplatform</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text">2026</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">Daily hydration tracker. Simple, fast, habit-<br>building. Notifies you when you fall behind.<br>Streak tracking included.</p>
+                    </li>
+                    <li class="list-item-wrapper"><!-- color-picker -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium"><a href="https://github.com/dkluske/color-palette-builder" class="primary-text link">color-palette-builder</a></p>
+                                <p class="tertiary-text">React</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text">2025</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">A simple web tool to create a color palette for your projects.<br><br><a href="https://dkluske.github.io/color-palette-builder" class="secondary-text link">> Online Demo</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content-SKILLS">
+                <p class="content-index tertiary-text small">03 / SKILLS</p>
+                <div id="skills-wrapper">
+                    <div class="skill">
+                        <p class="secondary-text small">Frontend</p>
+                        <ul class="skill-list">
+                            <li class="tertiary-text small">React</li>
+                            <li class="tertiary-text small">JavaScript</li>
+                            <li class="tertiary-text small">TypeScript</li>
+                            <li class="tertiary-text small">Jetpack Compose</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <p class="secondary-text small">Backend</p>
+                        <ul class="skill-list">
+                            <li class="tertiary-text small">Java</li>
+                            <li class="tertiary-text small">Kotlin</li>
+                            <li class="tertiary-text small">Spring</li>
+                            <li class="tertiary-text small">Ktor</li>
+                            <li class="tertiary-text small">Hibernate</li>
+                            <li class="tertiary-text small">Exposed</li>
+                            <li class="tertiary-text small">Apache Kafka</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <p class="secondary-text small">API</p>
+                        <ul class="skill-list">
+                            <li class="tertiary-text small">REST</li>
+                            <li class="tertiary-text small">SOAP</li>
+                            <li class="tertiary-text small">GraphQL</li>
+                            <li class="tertiary-text small">Websockets</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <p class="secondary-text small">Database</p>
+                        <ul class="skill-list">
+                            <li class="tertiary-text small">PostgreSQL</li>
+                            <li class="tertiary-text small">SQLite3</li>
+                            <li class="tertiary-text small">MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-EXPERIENCE">
+                <p class="content-index tertiary-text small">04 / EXPERIENCE</p>
+                <ul id="experience-list">
+                    <li class="list-item-wrapper"><!-- combase -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium">Software Developer</p>
+                                <p class="tertiary-text">COMBASE AG</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text nowrap">2022 - present</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">Software development in the retail sector. Developing various high-performance point-of-sale and point-of-sale-related applications, including frontend and backend.</p>
+                    </li>
+                    <li class="list-item-wrapper"><!-- bad muskau -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium">IT-Administrator</p>
+                                <p class="tertiary-text">City of Bad Muskau</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text nowrap">2017 - 2022</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">Worked as an IT-Administrator for the City Bad Muskau, managing IT infrastructure and providing technical support to various departments.</p>
+                    </li>
+                    <li class="list-item-wrapper"><!-- uni -->
+                        <div class="list-item-heading">
+                            <div class="list-item-leading-content">
+                                <p class="medium">Business Economics and Computer Science (B.Sc.)</p>
+                                <p class="tertiary-text">Berufsakademie Bautzen</p>
+                            </div>
+                            <div class="list-item-trailing-content">
+                                <p class="tertiary-text nowrap">2017 - 2020</p>
+                            </div>
+                        </div>
+                        <p class="secondary-text small">Studies in Business Economics and Computer Science while working as an IT-Administrator.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content-CONTACT">
+                <p class="content-index tertiary-text small">05 / CONTACT</p>
+                <ul id="contact-list">
+                    <li class="list-item-wrapper"> <!-- email -->
+                        <div class="list-item-table-row">
+                            <div class="tertiary-text">E-Mail</div>
+                            <div>dominik.kluske@proton.me</div>
+                        </div>
+                    </li>
+                    <li class="list-item-wrapper"> <!-- github -->
+                        <div class="list-item-table-row">
+                            <div class="tertiary-text">GitHub</div>
+                            <div><a href="https://github.com/dkluske" class="primary-text link">@dkluske</a></div>
+                        </div>
+                    </li>
+                    <li class="list-item-wrapper"> <!-- linkedin -->
+                        <div class="list-item-table-row">
+                            <div class="tertiary-text">LinkedIn</div>
+                            <div><a href="https://linkedin.com/in/dominik-kluske" class="primary-text link">/in/dominik-kluske</a></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-
-    <main>
-        <!-- Welcome Section -->
-        <section id="welcome" class="section bg-gradient-to-br from-blue-400 to-blue-800 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Dominik Kluske</h1>
-                <h2 class="text-2xl md:text-3xl font-light mb-8 animate-fade-in-delay">Professional Software Developer</h2>
-                <div class="flex justify-center space-x-4">
-                    <a href="#projects" class="px-8 py-3 bg-white text-blue-500 rounded-full font-semibold hover:bg-opacity-90 transition-all">
-                        Meine Projekte
-                    </a>
-                    <a href="#contact" class="px-8 py-3 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-blue-500 transition-all">
-                        Kontakt
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center mb-12">Über mich</h2>
-                    <div class="bg-white rounded-xl shadow-lg p-8">
-                        <p class="text-lg leading-relaxed mb-6">
-                            Hallo! Ich bin ein leidenschaftlicher Software Entwickler mit Fokus auf moderne Technologien und benutzerfreundliche Designs.
-                        </p>
-                        <p class="text-lg leading-relaxed mb-6">
-                            Meine Stärken liegen in der Frontend-Entwicklung mit Jetpack Compose, React oder Vaadin, sowie in der Backend-Entwicklung mit Kotlin und Java. 
-                            Ich lege großen Wert auf sauberen Code, Performance und eine optimale Benutzererfahrung.
-                        </p>
-                        <p class="text-lg leading-relaxed">
-                            Neben meiner aktuellen Tätigkeit in der Point-of-sale Branche, arbeite ich sehr gern in meiner Freizeit an privaten <a href="#projects">Projekten</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Meine Projekte</h2>
-                <div class="relative">
-                    <div class="swiper projects-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Projects will be added dynamically -->
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Meine Skills</h2>
-                <div class="relative">
-                    <div class="swiper skills-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Skills will be added dynamically -->
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gray-50">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Kontakt</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <!-- Contact cards will be added dynamically -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Dominik Kluske. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="src/script.js"></script>
 </body>
-</html> 
+</html>
