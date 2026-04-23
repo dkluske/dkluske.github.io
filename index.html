@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dominik Kluske | Software Engineer</title>
     <style>
         @font-face {
             font-family: 'Jetbrains-Mono';
-            src: url('./src/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+            src: url('./static/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
         }
         :root {
             --background-color: #0A0A0A;
@@ -219,6 +220,62 @@
         }
         .link:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            #content-wrapper {
+                flex-direction: column;
+                height: auto;
+                overflow-x: hidden;
+            }
+            #sidebar {
+                max-width: 100%;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                height: auto;
+                padding: 16px;
+                box-sizing: border-box;
+            }
+            #sidebar p.tertiary-text {
+                padding: 0 0 16px 0 !important;
+            }
+            #nav-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 12px;
+                padding: 0;
+                align-self: flex-start;
+            }
+            #nav-list li {
+                padding-left: 0;
+            }
+            #main-content {
+                padding: 32px 16px;
+                justify-content: flex-start;
+                height: auto;
+                box-sizing: border-box;
+            }
+            .big {
+                font-size: 32px;
+            }
+            .medium {
+                font-size: 20px;
+            }
+            .list-item-heading {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .list-item-trailing-content {
+                margin-top: 4px;
+            }
+            .list-item-table-row {
+                flex-direction: column;
+            }
+            .list-item-table-row > div:first-child {
+                min-width: unset;
+            }
         }
     </style>
     <script>
